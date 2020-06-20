@@ -16,7 +16,7 @@ var game =  {
 		game.lives = 3;
 		game.animate();
 		game.size = game.canvas.width / CELLS;
-		game.speed = 50;
+		game.speed = 60;
 		game.time = new Date().getTime();
 		game.dt = 0;
 		game.pressed = true;
