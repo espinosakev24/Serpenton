@@ -24,6 +24,7 @@ var game =  {
 	},
 	reset:function()
 	{
+		let score = document.getElementsByClassName("innerScoreText")[0];
 		game.dir = 1;
 		game.snake = [];
 		game.snake = [{
@@ -31,6 +32,7 @@ var game =  {
 			y: parseInt(CELLS / 2)
 		}];
 		game.setFood();
+		score.textContent = 0;
 	},
 	setFood:function() 
 	{
@@ -112,8 +114,10 @@ var game =  {
 
 		if (head.x == game.food.posX && head.y == game.food.posY)
 		{
+			let score = document.getElementsByClassName("innerScoreText")[0];
 			game.setFood();
 			game.snake.push({x:game.snake[game.snake.length - 1].x, y:game.snake[game.snake.length - 1]});
+			score.textContent = game.snake.length - 1;
 			console.log(game.snake.length);
 		}
 	},
@@ -154,6 +158,12 @@ function fillSquare(context, x, y, size, color) {
 
 function clear_canvas(){
 	var objects = document.getElementsByClassName("b");
+	var myCanvas = document.getElementById("canvas");
+	var subCont = document.getElementById("sub-cont");
+	var scoreCont = document.getElementsByClassName("score-cont");
+	scoreCont[0].style.display = "block";
+	subCont.style.display = "none";
+	myCanvas.style.display = "block";
 	objects[0].style.display = "none";
 }
 var keyboard = {

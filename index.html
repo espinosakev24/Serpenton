@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="game.js" type="text/javascript">
@@ -7,25 +8,33 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title></title>
 </head>
+
 <body>
+	<div class="score-cont">
+		<div class="score">
+			Your score:
+			<span class="innerScoreText">
+				0
+			</span>
+		</div>
+	</div>
 	<div class="container">
-
-
-		<div class="b">
-			<h1 class="title">Serpenton</h1>
-			<div class="button" onclick="clear_canvas();"><p>Play</p></div>
-			<div class="button" onclick="clear_canvas();"><p>Credits</p></div>
-			<div class="button" onclick="clear_canvas();"><p>Exit</p></div>
+		<div class="sub-cont" id="sub-cont">
+			<div class="texts-container b">
+				<h1 class="title">Serpenton</h1>
+				<div class="button" onclick="clear_canvas();">Play this game!</div>
+			</div>
 		</div>
 
 
-		<canvas width="600" height="600" id="canvas">Your browser does not support HTML5 Canvas. Please shift to a newer browser.
+		<canvas width="600" height="600" id="canvas">Your browser does not support HTML5 Canvas. Please shift to a newer
+			browser.
 		</canvas>
 	</div>
-		<!--<img src="images/trump.png" id="trump_sprite" style="display: none;"> -->
+	<!--<img src="images/trump.png" id="trump_sprite" style="display: none;"> -->
 
 
 
-	 
 </body>
+
 </html>

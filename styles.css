@@ -1,43 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+
+html, body {
+	height: 90%;
+}
+
 body {
-	background-color: #BFBFBF;
+	background-color: #C2C2C2;
 }
 .container {
+	height: 100%;
 	position: relative;
 	display: flex;
 	justify-content: center;
 }
 .title {
-	position: absolute;
-	font-family: aktiv-grotesk, sans-serif;
+	font-family: 'Odibee Sans', cursive;
 	z-index: 1;
+	color: #292929;
+	font-size: 3rem;
 }
-.b{
+.texts-container{
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	width: 70%;
+	height: 400px;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 1rem 5rem 1rem;
+	border-radius: 10px;
+	background-color: #ADADAD;
+}
+.sub-cont {
+	height: 600px;
+	width: 50%;
+	background-color: #B8B8B8;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .button {
 	text-align: center;
-	width: 120px;
+	padding: 1rem;
+	width: 70%;
 	height: 40px;
-	margin-top: 50%;
 	background-color: #EE0045;
-	transform: translate(-180px, 60px);
 	border-radius: 10px;
 	z-index: 1;
+	color: #FFFFFF;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
 .button:hover {
-	background-color: #CF4D6F;
-	border-bottom: 3px solid gray;
+	background-color: #EE0045;
+	color: white;
+	transform: scale(.95);
+	font-weight: 600;
 }
 p {
-	color: #FFFFFF;
-	font-family: aktiv-grotesk, sans-serif;
-	line-height: 10px;
-	font-weight: bold;
+
 }
 canvas {
 	border: 1px solid gray;
 	box-shadow: 10px 10px 5px grey;
 	position: absolute;
+	display: none;
+}
+
+.score-cont {
+	position: absolute;
+	right: 6rem;
+	bottom: 4rem;
+	z-index: 1;
+	display: none;
+}
+.score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #EE0045;
+	height: 50px;
+	width: 200px;
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+	font-weight: bolder;
+	border-radius: 10px;
 }
